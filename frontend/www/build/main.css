@@ -27455,6 +27455,13 @@ ion-navbar.toolbar {
   }
 }
 
+page-login ion-content {
+  background-image: url("../../assets/login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 page-profile ion-header {
   background-image: url("../../assets/profile.jpg");
   background-repeat: no-repeat;
