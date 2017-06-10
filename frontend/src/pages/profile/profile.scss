@@ -5,7 +5,25 @@ page-profile {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 30%;
+        height: 200px;
+        color: white;
+        padding: 10px;
+    }
+
+    #name {
+      font-size: medium;
+      font-weight: bold;
+      margin-top: 130px;
+      margin-bottom: 0px;
+    }
+
+    #age {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    #job {
+      margin-top: 0px;
     }
 
 }
