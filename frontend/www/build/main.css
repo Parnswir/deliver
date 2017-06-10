@@ -27454,3 +27454,11 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-profile ion-header {
+  background-image: url("../../assets/profile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30%;
+}

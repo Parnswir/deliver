@@ -55847,10 +55847,9 @@ MapPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-map',template:/*ion-inline-start:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/map/map.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Map\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/map/map.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], MapPage);
 
-var _a;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
@@ -55880,11 +55879,12 @@ var ProfilePage = (function () {
 }());
 ProfilePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Profile\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/profile/profile.html"*/
+        selector: 'page-profile',template:/*ion-inline-start:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/profile/profile.html"*/'<ion-header>\n\n  <ion-label>Jane Campbell</ion-label>\n  <ion-label>06/07/1990</ion-label>\n  \n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    \n    <ion-item>\n      <ion-label>Address:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Job:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Health insurance:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Weeks of pregnancy:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Due date:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Given birth:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Pregnant with:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Complications:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Extra:</ion-label>\n      <ion-input></ion-input>\n    </ion-item>\n  \n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"/Users/miguel/Developer/golden-pancake/frontend/src/pages/profile/profile.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
 ], ProfilePage);
 
+var _a;
 //# sourceMappingURL=profile.js.map
 
 /***/ }),
