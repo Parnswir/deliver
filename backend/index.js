@@ -16,10 +16,35 @@ MongoClient.connect(url, function(err, db) {
   });
 
   app.get('/midwives', function (req, res) {
-    db.collection('midwives').find().toArray(function (err, result) {
-      if (err) throw err;
-      res.send(result);
-    });
+    if (req.query.lon && req.query.lat) {
+      db.collection('midwives').aggregate([
+        {
+            "$geoNear": {
+               "near": [parseFloat(req.query.lon), parseFloat(req.query.lat)],
+               "distanceField": "distance",
+               "spherical": true,
+               "distanceMultiplier": 6371000
+            }
+        },
+        {
+          "$redact": {
+            "$cond": {
+              "if": { "$lt": [ "$distance", "$travel" ] },
+              "then": "$$KEEP",
+              "else": "$$PRUNE"
+            }
+          }
+        }
+    ]).toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    } else {
+      db.collection('midwives').find().toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    }
   });
 
   app.listen(8080, function () {
