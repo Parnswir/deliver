@@ -1,14 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+import { MidwifeService } from './../../app/services/MidwifeService';
 
 @Component({
   selector: 'page-list',
-  templateUrl: 'list.html'
+  templateUrl: 'list.html',
+  providers: [MidwifeService]
 })
-export class ListPage {
+export class ListPage implements OnInit {
 
-  constructor(public navCtrl: NavController) {
+  mode = 'Observable'
+  errorMessage:string
+  results:any=[]
 
+  constructor(public navCtrl: NavController, private midwifeService: MidwifeService) {
+
+  }
+
+  ngOnInit() {
+    this.getMidwives();
+  }
+
+  getMidwives() {
+    this.midwifeService.getMidwives()
+                         .subscribe(
+                           results => this.results = results,
+                           error =>  this.errorMessage = <any>error);
   }
 
 }
