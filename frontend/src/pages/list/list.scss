@@ -1,3 +1,15 @@
 page-list {
+  ion-list {
+    padding-top: 20px;
+  }
 
+  ion-item {
+    #arrow {
+      position: fixed;
+      top: 40%;
+      right: 10px;
+      color: lightblue;
+      font-weight: bold;
+    }
+  }
 }
