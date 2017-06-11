@@ -31,7 +31,9 @@ export class ListPage implements OnInit {
   }
 
   showDetail(detail) {
-    this.navCtrl.push(DetailPage, detail);
+    this.navCtrl.push(DetailPage, {
+      user: detail
+    });
   }
 
 }

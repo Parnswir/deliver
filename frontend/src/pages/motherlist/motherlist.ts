@@ -31,7 +31,9 @@ export class MotherlistPage implements OnInit {
   }
 
   showProfile(profile) {
-    this.navCtrl.push(ProfilePage, profile);
+    this.navCtrl.push(ProfilePage, {
+      user: profile
+    });
   }
 
 }

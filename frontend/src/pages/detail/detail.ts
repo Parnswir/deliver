@@ -8,9 +8,11 @@ import { NavController, NavParams } from 'ionic-angular';
 export class DetailPage {
 
   profile: any;
+  edit: boolean;
 
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    this.profile = navParams.data;
+    this.profile = navParams.data.user;
+    this.edit = navParams.data.edit;
   }
 
 }

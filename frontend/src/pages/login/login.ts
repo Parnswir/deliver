@@ -22,14 +22,20 @@ export class LoginPage {
 
   }
 
-  login() {    
+  login() {
     if (this.email && this.email.toLowerCase().startsWith('mo')) {
       this.motherService.getRandom().subscribe(m => {
-        this.navCtrl.setRoot(ProfilePage, m[0]);
+        this.navCtrl.setRoot(ProfilePage, {
+          user: m[0],
+          edit: true
+        });
       });
     } else {
       this.midwifeService.getRandom().subscribe(m => {
-        this.navCtrl.setRoot(DetailPage, m[0]);
+        this.navCtrl.setRoot(DetailPage, {
+          user: m[0],
+          edit: true
+        });
       });
     }
   }
