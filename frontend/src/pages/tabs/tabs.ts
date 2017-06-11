@@ -20,6 +20,11 @@ export class TabsPage {
   tab3Root = CalendarPage;
   tab4Root = null;
 
+  static calendarParams = null;
+  get calendarParams() {
+    return TabsPage.calendarParams;
+  }
+
   get isMidwife() {
     return !!this.user.since;
   }

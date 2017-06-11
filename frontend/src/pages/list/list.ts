@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { TabsPage } from "../tabs/tabs";
 import { DetailPage } from "../detail/detail";
 import { MidwifeService } from './../../app/services/MidwifeService';
 
@@ -31,6 +32,10 @@ export class ListPage implements OnInit {
   }
 
   showDetail(detail) {
+    TabsPage.calendarParams = {
+      user: detail
+    };
+
     this.navCtrl.push(DetailPage, {
       user: detail
     });

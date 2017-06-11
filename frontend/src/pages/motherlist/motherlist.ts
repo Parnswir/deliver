@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { ProfilePage } from "../profile/profile";
+import { TabsPage } from "../tabs/tabs";
 import { MotherService } from './../../app/services/MotherService';
 
 @Component({
@@ -16,7 +17,6 @@ export class MotherlistPage implements OnInit {
   results:any=[]
 
   constructor(public navCtrl: NavController, private midwifeService: MotherService) {
-
   }
 
   ngOnInit() {
@@ -31,6 +31,10 @@ export class MotherlistPage implements OnInit {
   }
 
   showProfile(profile) {
+    TabsPage.calendarParams = {
+      user: profile
+    };
+
     this.navCtrl.push(ProfilePage, {
       user: profile
     });

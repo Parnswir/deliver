@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+
+import { TabsPage } from "../tabs/tabs";
 
 @Component({
   selector: 'page-calendar',
@@ -10,8 +12,10 @@ export class CalendarPage {
 
   clicked: boolean = false
 
-  constructor(public navCtrl: NavController) {
+  profile: any;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {    
+    this.profile = TabsPage.calendarParams.user;
   }
 
 }

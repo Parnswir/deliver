@@ -1,5 +1,34 @@
 page-calendar {
 
+  ion-header {
+        background-image: url('../../assets/mprofile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        color: white;
+        padding: 10px;
+
+        #name {
+          text-shadow: 1px 1px 1px #222;
+          font-size: medium;
+          font-weight: bold;
+          margin-top: 130px;
+          margin-bottom: 0px;
+        }
+
+        #since {
+          text-shadow: 1px 1px 1px #222;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        #babies {
+          text-shadow: 1px 1px 1px #222;
+          margin-top: 0px;
+        }
+  }
+
 }
 
 .flex-container {
@@ -9,7 +38,6 @@ page-calendar {
 }
 
 #register {
-  margin-top: 250px;
   border-radius: 20px;
   width: 200px;
 }
