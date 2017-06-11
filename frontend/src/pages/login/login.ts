@@ -28,7 +28,7 @@ export class LoginPage {
         this.navCtrl.setRoot(ProfilePage, m[0]);
       });
     } else {
-      this.motherService.getRandom().subscribe(m => {
+      this.midwifeService.getRandom().subscribe(m => {
         this.navCtrl.setRoot(DetailPage, m[0]);
       });
     }
