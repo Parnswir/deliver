@@ -1,17 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Map
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
+  <img src="assets/cluster_map.png">
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+    <ion-item *ngFor="let item of results; trackBy: _id">
+      <ion-thumbnail item-start>
+      <img src="{{item.photo}}">
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <p>Active since {{item.since}}<br>{{item.births}} births</p>
+      <div id="arrow" class="icon-arrow-right"></div>
     </ion-item>
   </ion-list>
 </ion-content>
