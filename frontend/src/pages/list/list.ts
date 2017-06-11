@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { DetailPage } from "../detail/detail";
 import { MidwifeService } from './../../app/services/MidwifeService';
 
 @Component({
@@ -27,6 +28,10 @@ export class ListPage implements OnInit {
                          .subscribe(
                            results => this.results = results,
                            error =>  this.errorMessage = <any>error);
+  }
+
+  showDetail(detail) {
+    this.navCtrl.push(DetailPage, detail);
   }
 
 }

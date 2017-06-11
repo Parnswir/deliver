@@ -1,8 +1,8 @@
-<ion-header>
+<ion-header [ngStyle]="{ 'background-image': 'url(' + profile.photo + ')' }">
 
-  <ion-label id="name">Clifford Brooks</ion-label>
-  <ion-label id="since">5 years of experience</ion-label>
-  <ion-label id="babies">Delivered 174 babies</ion-label>
+  <ion-label id="name">{{ profile.name }}</ion-label>
+  <ion-label id="since">{{ 2017 - profile.since }} years of experience</ion-label>
+  <ion-label id="babies">Delivered {{ profile.birth }} babies</ion-label>
 
   <div class="action-icon">
     <div class="icon-pencil"></div>
@@ -12,23 +12,31 @@
 
 <ion-content padding>
 
-<div class="grid">
-  <div class="card" id="about">
-    <div class="label">About me</div>
-    <p>
-      I am a freelance midwife based in Berlin Mitte.
-      If you have any questions, please contact me during normal business hours.
-  </div>
-  <div class="card" id="skills">
-    <div class="label">Skill set</div>
-    <p>Home birth · Nutrition · Baby massage</p>
-  </div>
-  <div class="card" id="interest">
-    <div>
-      Interests:<br>
-      Theater · Motorbikes · Hackathons
+  <div class="grid">
+    <div class="card" id="about">
+      <div class="label">About me</div>
+      <p>
+        {{ profile.about }}
+      </p>
+    </div>
+    <div class="card" id="skills">
+      <div class="label">Skill set</div>
+      <p>
+        <span *ngFor="let item of profile.certifications; let isLast=last">
+          {{item}}{{isLast ? '' : ' &middot; '}}
+        </span>
+      </p>
+    </div>
+    <div class="card" id="interest">
+      <div>
+        Interests:<br>
+        <p>
+        <span *ngFor="let item of profile.interests; let isLast=last">
+          {{item}}{{isLast ? '' : ' &middot; '}}
+        </span>
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
 </ion-content>

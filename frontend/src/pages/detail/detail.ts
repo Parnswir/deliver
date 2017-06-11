@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-detaiL',
@@ -7,8 +7,11 @@ import { NavController } from 'ionic-angular';
 })
 export class DetailPage {
 
-  constructor(public navCtrl: NavController) {
+  profile: any;
 
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
+    console.log(navParams);
+    this.profile = navParams.data;
   }
 
 }
