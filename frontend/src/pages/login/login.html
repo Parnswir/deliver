@@ -1,15 +1,23 @@
 <ion-content padding>
 
   <div class="flex-container">
+    <img id="logo" src="../../assets/logo.png">
+  </div>
+
+  <div class="flex-container">
+  <p id="app">DELIVER</p>
+  </div>
+
+  <div class="flex-container">
     <button ion-button id="register">Join us</button>
   </div>
-  
+
   <ion-input color="primary" id="email" type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
-  
+
   <ion-input type="password" placeholder="Password"></ion-input>
-  
+
   <button ion-button id="login" (tap)="login()">Login</button>
-  
+
   <div class="flex-container">
     <ion-label id="privacy">We respect your privacy</ion-label>
   </div>
