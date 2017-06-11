@@ -6,6 +6,9 @@
       </ion-thumbnail>
       <h2>{{item.name}}</h2>
       <p>Active since {{item.since}}<br>{{item.births}} births</p>
+      <div class="indicator">
+        <div class="icon-directions" ngClass="{{item.status}}"></div>
+      </div>
       <div id="arrow" class="icon-arrow-right"></div>
     </ion-item>
   </ion-list>
