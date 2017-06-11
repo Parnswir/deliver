@@ -15,5 +15,13 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.scroll-content {
+  background-color: rgba(74, 90, 226, .11);
+}
+
+.item-block {
+  background-color: rgba(0,0,0,0);
+}
+
 $simple-line-font-path: "../assets/font/";
 @import './node_modules/simple-line-icons/scss/simple-line-icons';
