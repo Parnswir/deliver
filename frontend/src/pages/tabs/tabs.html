@@ -1,5 +1,6 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Login" tabIcon="star"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="MList" tabIcon="star"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="List" tabIcon="star"></ion-tab>
+  <ion-tab [root]="tab1Root" [rootParams]="profileParams" tabTitle="Profile" tabIcon="star"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="List" tabIcon="star"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Calendar" tabIcon="star"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Notifications" tabIcon="star"></ion-tab>
 </ion-tabs>

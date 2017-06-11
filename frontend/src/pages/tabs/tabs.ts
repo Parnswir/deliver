@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { DetailPage } from '../detail/detail';
 import { ListPage } from '../list/list';
@@ -12,11 +13,26 @@ import { ProfilePage } from '../profile/profile';
 })
 export class TabsPage {
 
-  tab1Root = LoginPage;
-  tab2Root = MotherlistPage;
-  tab3Root = ListPage;
+  user: any;
+  tab1Root = null;
+  tab2Root = null;
+  tab3Root = null;
+  tab4Root = null;
 
-  constructor() {
+  get isMidwife() {
+    return !!this.user.since;
+  }
 
+  get profileParams() {
+    return {
+      user: this.user,
+      edit: true
+    };
+  }
+
+  constructor(public navCtrl: NavController, private navParams: NavParams) {
+    this.user = navParams.data.user;
+    this.tab1Root = navParams.data.page;
+    this.tab2Root = this.isMidwife ? MotherlistPage : ListPage;
   }
 }

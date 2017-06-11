@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { TabsPage } from '../tabs/tabs';
 import { ProfilePage } from "../profile/profile";
 import { DetailPage } from "../detail/detail";
 import { MidwifeService } from "../../app/services/MidwifeService";
@@ -19,20 +20,21 @@ export class LoginPage {
   email: string;
 
   constructor(public navCtrl: NavController, private motherService: MotherService, private midwifeService: MidwifeService) {
-
   }
 
   login() {
     if (this.email && this.email.toLowerCase().startsWith('mo')) {
       this.motherService.getRandom().subscribe(m => {
-        this.navCtrl.setRoot(ProfilePage, {
+        this.navCtrl.setRoot(TabsPage, {
+          page: ProfilePage,
           user: m[0],
           edit: true
         });
       });
     } else {
       this.midwifeService.getRandom().subscribe(m => {
-        this.navCtrl.setRoot(DetailPage, {
+        this.navCtrl.setRoot(TabsPage, {
+          page: DetailPage,
           user: m[0],
           edit: true
         });
