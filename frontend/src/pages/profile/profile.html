@@ -1,8 +1,8 @@
-<ion-header>
+<ion-header [ngStyle]="{ 'background-image': 'url(' + profile.photo + ')' }">
 
-  <ion-label id="name">Jane Campbell</ion-label>
-  <ion-label id="age">27 years old</ion-label>
-  <ion-label id="job">Copywriter</ion-label>
+  <ion-label id="name">{{ profile.name }}</ion-label>
+  <ion-label id="age">{{ profile.age }} years old</ion-label>
+  <ion-label id="job">{{ profile.job }}</ion-label>
 
   <div class="action-icon">
     <div class="icon-phone"></div>
@@ -15,40 +15,51 @@
 
 <ion-content padding>
 
-<div class="grid">
-  <div class="card" id="map">
-    <div class="icon-location-pin" id="pin"></div>
-  </div>
-  <div class="card" id="weeks">
-    <div id="weeks-of">Weeks of pregnancy</div>
-    <div id="weeks-nr">24</div>
-    <div id="due-date">Due date: 19/10/2017</div>
-  </div>
-  <div class="card" id="baby">
-    <div id="pregnant-with">Pregnant with</div>
-    <img src="../../assets/icon/baby.png">
-    <img src="../../assets/icon/baby.png">
-  </div>
-  <div class="card" id="births">
-    <div id="given-birth">Given birth</div>
-    <div id="two-times">2x</div>
-  </div>
-  <div class="card" id="insurance">
-    <div id="label">Private Insurance</div>
-    <div id="wallet" class="icon-wallet"></div>
-  </div>
-  <div class="card" id="complications">
-    <div>
-      Complications:<br>
-      I have diabetes and anemia.
+  <div class="grid">
+    <div class="card" id="map">
+      <div class="icon-location-pin" id="pin"></div>
+    </div>
+    <div class="card" id="weeks">
+      <div id="weeks-of">Weeks of pregnancy</div>
+      <div id="weeks-nr">{{ profile.weeks_pregnant }}</div>
+      <div id="due-date">Due date: {{ profile.due_date }}</div>
+    </div>
+    <div class="card" id="baby">
+      <div id="pregnant-with">Pregnant with</div>
+      <img src="../../assets/icon/baby.png">
+      <img src="../../assets/icon/baby.png" *ngIf="profile.complications_expected.indexOf('twins') > -1">
+    </div>
+    <div class="card" id="births">
+      <div id="given-birth">Given birth</div>
+      <div id="two-times">{{ profile.number_of_children }}x</div>
+    </div>
+    <div class="card" id="insurance">
+      <div id="label">{{ profile.insurance.type | titlecase }} Insurance</div>
+      <div id="wallet" class="icon-wallet"></div>
+      <div>{{ profile.insurance.insurer }}</div>
+    </div>
+    <div class="card" id="complications">
+      <div>
+        Complications:<br>
+        <p>
+          <span *ngIf="profile.complications_expected.length == 0">None</span>
+          <span *ngFor="let item of profile.complications_expected; let isLast=last">
+            {{item}}{{isLast ? '' : ' &middot; '}}
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="card" id="interest">
+      <div>
+        Interests:<br>
+        <p>
+          <span *ngIf="profile.interests.length == 0">None</span>
+          <span *ngFor="let item of profile.interests; let isLast=last">
+            {{item}}{{isLast ? '' : ' &middot; '}}
+          </span>
+        </p>
+      </div>
     </div>
   </div>
-  <div class="card" id="interest">
-    <div>
-      Interests:<br>
-      Gardening · Cooking · Science Fiction
-    </div>
-  </div>
-</div>
 
 </ion-content>

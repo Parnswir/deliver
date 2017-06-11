@@ -12,12 +12,12 @@ import { ProfilePage } from '../profile/profile';
 })
 export class TabsPage {
 
-  tab1Root = ProfilePage;
+  tab6Root = ProfilePage;
   tab2Root = ListPage;
   tab3Root = MapPage;
   tab4Root = DetailPage;
   tab5Root = LoginPage;
-  tab6Root = MotherlistPage;
+  tab1Root = MotherlistPage;
 
   constructor() {
 

@@ -31,9 +31,9 @@
       <div>
         Interests:<br>
         <p>
-        <span *ngFor="let item of profile.interests; let isLast=last">
-          {{item}}{{isLast ? '' : ' &middot; '}}
-        </span>
+          <span *ngFor="let item of profile.interests; let isLast=last">
+            {{item}}{{isLast ? '' : ' &middot; '}}
+          </span>
         </p>
       </div>
     </div>

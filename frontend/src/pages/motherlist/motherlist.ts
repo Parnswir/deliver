@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { ProfilePage } from "../profile/profile";
 import { MotherService } from './../../app/services/MotherService';
 
 @Component({
@@ -27,6 +28,10 @@ export class MotherlistPage implements OnInit {
                          .subscribe(
                            results => this.results = results,
                            error =>  this.errorMessage = <any>error);
+  }
+
+  showProfile(profile) {
+    this.navCtrl.push(ProfilePage, profile);
   }
 
 }

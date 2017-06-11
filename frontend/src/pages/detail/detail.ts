@@ -10,7 +10,6 @@ export class DetailPage {
   profile: any;
 
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    console.log(navParams);
     this.profile = navParams.data;
   }
 

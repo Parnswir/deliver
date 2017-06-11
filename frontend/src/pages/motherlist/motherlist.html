@@ -1,12 +1,17 @@
 <ion-content>
+
   <ion-list>
-    <ion-item *ngFor="let item of results; trackBy: _id">
+    <ion-item *ngFor="let item of results; trackBy: _id" (tap)="showProfile(item)">
       <ion-thumbnail item-start>
-      <img src="{{item.photo}}">
+        <img src="{{item.photo}}">
       </ion-thumbnail>
+
       <h2>{{item.name}}</h2>
+
       <p>{{item.age}} years old<br>{{item.weeks_pregnant}} weeks pregnant</p>
+
       <div id="arrow" class="icon-arrow-right"></div>
     </ion-item>
   </ion-list>
+
 </ion-content>
