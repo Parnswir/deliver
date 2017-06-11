@@ -4,7 +4,7 @@
   <ion-label id="since">{{ 2017 - profile.since }} years of experience</ion-label>
   <ion-label id="babies">Delivered {{ profile.births }} babies</ion-label>
 
-  <div class="action-icon" *ngIf="!edit">
+  <div class="action-icon" *ngIf="!edit" (tap)="call()">
     <div class="icon-phone"></div>
   </div>
   <div class="action-icon" *ngIf="!edit">

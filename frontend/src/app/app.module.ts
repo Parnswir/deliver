@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
+import { CallPage } from '../pages/call/call';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     MapPage,
     ProfilePage,
+    CallPage,
     TabsPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     MapPage,
     ProfilePage,
+    CallPage,
     TabsPage
   ],
   providers: [
