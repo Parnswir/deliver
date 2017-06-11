@@ -12,6 +12,7 @@ import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CallPage } from '../pages/call/call';
+import { CalendarPage } from '../pages/calendar/calendar';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapPage,
     ProfilePage,
     CallPage,
-    TabsPage
+    TabsPage,
+    CalendarPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapPage,
     ProfilePage,
     CallPage,
-    TabsPage
+    TabsPage,
+    CalendarPage
   ],
   providers: [
     StatusBar,

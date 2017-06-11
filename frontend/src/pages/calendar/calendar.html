@@ -1,0 +1,18 @@
+<ion-header [ngStyle]="{ 'background-image': 'url(' + profile.photo + ')' }">
+
+  <ion-label id="name">{{ profile.name }}</ion-label>
+  <ion-label id="since">{{ 2017 - profile.since }} years of experience</ion-label>
+  <ion-label id="babies">Delivered {{ profile.births }} babies</ion-label>
+
+</ion-header>
+
+<ion-content padding>
+
+  <img src="../../assets/calendar_blank.png" (tap)="clicked = true" *ngIf="!clicked">
+  <img src="../../assets/calendar_filled.png" *ngIf="clicked">
+
+  <div class="flex-container" *ngIf="clicked">
+    <button ion-button id="register">Book an appointment</button>
+  </div>
+
+</ion-content>

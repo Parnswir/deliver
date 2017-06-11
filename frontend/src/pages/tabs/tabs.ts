@@ -7,6 +7,7 @@ import { MotherlistPage } from '../motherlist/motherlist';
 import { LoginPage } from '../login/login';
 import { MapPage } from '../map/map';
 import { ProfilePage } from '../profile/profile';
+import { CalendarPage } from '../calendar/calendar';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,7 +17,7 @@ export class TabsPage {
   user: any;
   tab1Root = null;
   tab2Root = null;
-  tab3Root = null;
+  tab3Root = CalendarPage;
   tab4Root = null;
 
   get isMidwife() {
