@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { DetailPage } from '../detail/detail';
 import { ListPage } from '../list/list';
+import { MotherlistPage } from '../motherlist/motherlist';
 import { LoginPage } from '../login/login';
 import { MapPage } from '../map/map';
 import { ProfilePage } from '../profile/profile';
@@ -16,6 +17,7 @@ export class TabsPage {
   tab3Root = MapPage;
   tab4Root = DetailPage;
   tab5Root = LoginPage;
+  tab6Root = MotherlistPage;
 
   constructor() {
 

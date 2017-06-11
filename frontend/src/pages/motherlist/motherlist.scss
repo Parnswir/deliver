@@ -1,0 +1,36 @@
+page-list {
+  ion-list {
+    padding-top: 20px;
+  }
+
+  .indicator {
+    position: fixed;
+    top: 40%;
+    right: 50px;
+  }
+
+  ion-item {
+
+    cursor: pointer;
+
+    #arrow {
+      position: fixed;
+      top: 40%;
+      right: 10px;
+      color: lightblue;
+      font-weight: bold;
+    }
+  }
+
+  .free {
+    background-color: lightgreen;
+  }
+
+  .alert {
+    background-color: yellow;
+  }
+
+  .blocked {
+    background-color: red;
+  }
+}

@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 
 import { DetailPage } from '../pages/detail/detail';
 import { ListPage } from '../pages/list/list';
+import { MotherlistPage } from '../pages/motherlist/motherlist';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     DetailPage,
     ListPage,
+    MotherlistPage,
     LoginPage,
     MapPage,
     ProfilePage,
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     DetailPage,
     ListPage,
+    MotherlistPage,
     LoginPage,
     MapPage,
     ProfilePage,
