@@ -10,6 +10,9 @@ page-list {
   }
 
   ion-item {
+
+    cursor: pointer;
+
     #arrow {
       position: fixed;
       top: 40%;
