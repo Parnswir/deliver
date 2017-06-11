@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MidwifeService {
   // todo: access location service:
-  private url = 'http://localhost:8080/midwives?lon=52.512334&lat=13.390027';
+  private url = 'http://10.82.5.149:8080/midwives?lon=52.512334&lat=13.390027';
 
   constructor (private http: Http) {}
 

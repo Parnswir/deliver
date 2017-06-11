@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MotherService {
-  private url = 'http://localhost:8080/mothers';
+  private url = 'http://10.82.5.149:8080/mothers';
 
   constructor (private http: Http) {}
 
