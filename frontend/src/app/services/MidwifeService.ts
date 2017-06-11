@@ -8,11 +8,18 @@ import 'rxjs/add/operator/map';
 export class MidwifeService {
   // todo: access location service:
   private url = 'http://10.82.5.149:8080/midwives?lon=52.512334&lat=13.390027';
+  private randomUrl = 'http://10.82.5.149:8080/random?from=midwives;
 
   constructor (private http: Http) {}
 
   getMidwives(): Observable<any[]> {
     return this.http.get(this.url)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
+
+  getRandom(): Observable<any[]> {
+    return this.http.get(this.randomUrl)
                     .map(this.extractData)
                     .catch(this.handleError);
   }

@@ -7,8 +7,15 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MotherService {
   private url = 'http://10.82.5.149:8080/mothers';
+  private randomUrl = 'http://10.82.5.149:8080/random?from=mothers';
 
   constructor (private http: Http) {}
+
+  getRandom(): Observable<any[]> {
+    return this.http.get(this.randomUrl)
+                    .map(this.extractData)
+                    .catch(this.handleError);
+  }
 
   getMothersByPosition(latitude, longitude, maxDistance): Observable<any[]> {
     return this.http.get(this.url + "?lon=" + (longitude || 52.512334) + "&lat=" + (latitude || 13.390027) + "&distance=" + (maxDistance || 10000))
