@@ -17,6 +17,8 @@ MongoClient.connect(url, function(err, db) {
     next();
   });
 
+  app.use(express.static('static'));
+
   app.get('/', function (req, res) {
     res.send('hello world');
   });
