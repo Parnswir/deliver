@@ -23,5 +23,9 @@
   background-color: rgba(0,0,0,0);
 }
 
+.scroll-content::-webkit-scrollbar {
+  width: 0;
+}
+
 $simple-line-font-path: "../assets/font/";
 @import './node_modules/simple-line-icons/scss/simple-line-icons';
