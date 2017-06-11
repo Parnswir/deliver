@@ -1,9 +1,41 @@
-<ion-header [ngStyle]="{ 'background-image': 'url(' + profile.photo + ')' }">
+<ion-content>
 
-  
+  <div class="background" [ngStyle]="{ 'background-image': 'url(' + profile.photo + ')' }"></div>
 
-</ion-header>
+  <div padded class="content">
 
-<ion-content padding>
+    <div id="name">{{profile.name}}</div>
+    <div id="app">Deliver</div>
+
+    <div class="grid">
+
+      <div class="action-button">
+        <div class="icon-microphone"></div>
+      </div>
+      <div class="action-button">
+        <div class="icon-menu"></div>
+      </div>
+      <div class="action-button">
+        <div class="icon-volume-2"></div>
+      </div>
+      <div class="action-button">
+        <div class="icon-plus"></div>
+      </div>
+      <div class="action-button">
+        <div class="icon-wallet"></div>
+      </div>
+      <div class="action-button">
+        <div class="icon-user"></div>
+      </div>
+
+      <div class="wide">
+        <div class="drop-button">
+          <div class="icon-call-end"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </ion-content>
