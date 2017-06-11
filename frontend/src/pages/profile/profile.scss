@@ -8,22 +8,39 @@ page-profile {
         height: 200px;
         color: white;
         padding: 10px;
-    }
 
-    #name {
-      font-size: medium;
-      font-weight: bold;
-      margin-top: 130px;
-      margin-bottom: 0px;
-    }
+        #name {
+          font-size: medium;
+          font-weight: bold;
+          margin-top: 130px;
+          margin-bottom: 0px;
+        }
 
-    #age {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+        #age {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
 
-    #job {
-      margin-top: 0px;
+        #job {
+          margin-top: 0px;
+        }
+
+        .action-icon {
+          position: relative;
+          float: right;
+          top: -60px;
+          height: 40px;
+          width: 40px;
+          background-color: lightblue;
+          text-align: center;
+          border-radius: 20px;
+          margin-left: 10px;
+
+          div {
+            margin-top: 10px;
+            font-size: x-large;
+          }
+        }
     }
 
     .grid {
