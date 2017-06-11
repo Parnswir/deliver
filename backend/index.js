@@ -24,6 +24,16 @@ MongoClient.connect(url, function(err, db) {
     res.send('hello world');
   });
 
+  app.get('/random', function (req, res) {
+    var from = req.query.from || 'mothers';
+    db.collection(from).aggregate([
+      { $sample: { size: 1 } }
+    ]).toArray(function (err, result) {
+      if (err) throw err;
+      res.send(result);
+    });
+  });
+
   app.get('/midwives', function (req, res) {
     if (req.query.lon && req.query.lat) {
       db.collection('midwives').aggregate([
