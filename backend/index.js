@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 var MongoClient = require('mongodb').MongoClient;
+var ObjectID = require('mongodb').ObjectID;
 
 var url = 'mongodb://localhost:27017/golden-pancake';
 
@@ -49,6 +50,74 @@ MongoClient.connect(url, function(err, db) {
       });
     } else {
       db.collection('midwives').find().toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    }
+  });
+
+  app.get('/mothers', function (req, res) {
+    if (req.query.lon && req.query.lat && req.query.maxDistance) {
+      db.collection('mothers').find({
+        "location": {
+          "$near": {
+            "$geometry": {
+              type: "Point" ,
+              coordinates: [ req.query.lon , req.query.lat ]
+            },
+            "$maxDistance": req.query.maxDistance
+          }
+        }
+      }).toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    }
+  });
+
+  app.get('/mothersbymidwife', function (req, res) {
+    if (req.query.id) {
+      db.collection('mothers').find({
+        "midwife": ObjectID(req.query.id)
+      }).toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    } else {
+      db.collection('mothers').find().toArray(function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+    }
+  });
+
+  app.get('/mothersnearmidwife', function (req, res) {
+    if (req.query.id) {
+      db.collection('midwives').find({
+        "_id": ObjectID(req.query.id)
+      }).toArray(function (err, result) {
+        if (err) throw err;
+        if (result.length > 0) {
+          var midwife = result[0];
+          console.log(midwife)
+          db.collection('mothers').find({
+            "location": {
+              "$near": {
+                "$geometry": {
+                  type: "Point" ,
+                  coordinates: [ midwife.location[0] , midwife.location[1] ]
+                },
+                "$maxDistance": midwife.travel
+              }
+            }
+          }).toArray(function (err, result) {
+            if (err) throw err;
+            res.send(result);
+          });
+        }
+      });
+    } else {
+      db.collection('mothers').find().toArray(function (err, result) {
         if (err) throw err;
         res.send(result);
       });
