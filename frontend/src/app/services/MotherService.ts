@@ -6,8 +6,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MotherService {
-  private url = 'http://10.82.5.149:8080/mothers';
-  private randomUrl = 'http://10.82.5.149:8080/random?from=mothers';
+  private url = 'http://deliver-backend:8080/mothers';
+  private randomUrl = 'http://deliver-backend:8080/random?from=mothers';
 
   constructor (private http: Http) {}
 
