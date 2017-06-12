@@ -20,5 +20,5 @@ To run the backend:
 
 To run the frontend:
 
-1. Setup your host file to point `deliver-backend` to point to `localhost` (or wherever the backend is running).
+1. Setup your host file to forward `deliver-backend` to `localhost` (or wherever the backend is running).
 2. `cd frontend && ionic serve --lab`
