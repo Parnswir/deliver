@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { DetailPage } from '../detail/detail';
 import { ListPage } from '../list/list';
 import { MotherlistPage } from '../motherlist/motherlist';
-import { LoginPage } from '../login/login';
-import { MapPage } from '../map/map';
-import { ProfilePage } from '../profile/profile';
 import { CalendarPage } from '../calendar/calendar';
 
 @Component({
